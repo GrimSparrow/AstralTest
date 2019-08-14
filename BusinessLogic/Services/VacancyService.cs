@@ -32,7 +32,7 @@ namespace BusinessLogic.Services
 
         public void InsertVacancies(IEnumerable<Vacancy> vacancies)
         {
-            vacancyRepository.InsertVacancies(vacancies);
+            vacancyRepository.InsertRange(vacancies);
         }
         public void UpdateVacancy(Vacancy vacancy)
         {

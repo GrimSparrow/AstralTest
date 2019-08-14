@@ -37,7 +37,7 @@ namespace DBRepository.Repositories
             SaveChanges();
         }
 
-        public void InsertVacancies(IEnumerable<T> entities)
+        public void InsertRange(IEnumerable<T> entities)
         {
             if (entities == null || !entities.Any())
             {
@@ -54,16 +54,6 @@ namespace DBRepository.Repositories
             {
                 throw new ArgumentNullException("entity");
             }
-            SaveChanges();
-        }
-
-        public void Delete(T entity)
-        {
-            if (entity == null)
-            {
-                throw new ArgumentNullException("entity");
-            }
-            entities.Remove(entity);
             SaveChanges();
         }
         public void Remove(T entity)

@@ -10,9 +10,8 @@ namespace DBRepository.Interfaces
         IQueryable<T> GetAll();
         T Get(long id);
         void Insert(T entity);
-        void InsertVacancies(IEnumerable<T> entities);
+        void InsertRange(IEnumerable<T> entities);
         void Update(T entity);
-        void Delete(T entity);
         void Remove(T entity);
         void SaveChanges();
     }
