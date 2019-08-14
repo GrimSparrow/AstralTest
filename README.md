@@ -1,7 +1,7 @@
 # Требования
 1. На машине должен быть установлен Node.js
 2. Запустить на машине локальный сервер Postgre
-3. Настроить в appsettings.json connection string для БД(настройки из запущенного на шаге 2 сервер Postgre) - "MyPostgreConnection": "Server=localhost;Port=5432;Database=test;User Id=postgres;Password=postgre;"
+3. Настроить в appsettings.json connection string для БД(настройки из запущенного на шаге 2 сервера Postgre) - "MyPostgreConnection": "Server=localhost;Port=5432;Database=test;User Id=postgres;Password=postgre;"
 # Функционал
 На данном этапе приложение способно загружать с hh.ru 50 актуальных вакансий через Http запрос к hh.api, сохранять вакансии в подключенную базу данных, при отсутствии соединения с hh.api данные тянутся только из БД. Каждая вакансия на данный момент описывается 6 полями(Id, AddedDate(дата добавления), Name(Наименование), Org(Организация), SalaryFrom(Зарплата от), SalaryTo(Зарплата до));
 Имеется input для поиска - при вводе каждого символа поиск по бд совпадения. Кнопка обновить - обновление данных(запрос вакансий).
